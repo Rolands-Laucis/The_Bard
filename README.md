@@ -9,3 +9,4 @@ console command to launch the bot <br>
 
 <b>token and access key file should be kept locally on the machine and not uploaded to git</b>
  
+# https://discord.js.org/#/
