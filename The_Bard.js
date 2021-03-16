@@ -4,7 +4,7 @@ import Discord from 'discord.js'
 import fs from 'fs'
 
 //read access keys and tokens of the bot account from file outside the root dir of this bot (and outside of the git repo folder)
-token = JSON.parse(fs.readFileSync('../keys.json'))['token']
+var token = JSON.parse(fs.readFileSync('../keys.json'))['token']
 
 console.log('starting up The Bard...')
 const client = new Discord.Client();
