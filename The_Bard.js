@@ -15,9 +15,6 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.author.id != "821327316290502706"){
-    if (msg.content === 'ping') {
-      msg.reply('Pong!');
-    }
 
     var reply = ParseCommand(msg)
 
@@ -35,6 +32,7 @@ var cmdPrefix = '!'
 var commands = {
   "cmd functions": {
     "help": Help,
+    "ping": Ping,
     "embed": EmbedCmd
   },
   "cmd descriptions":{
@@ -59,6 +57,10 @@ function Help(){
     msg += "``" + cmdPrefix + key + "`` : " + commands['cmd descriptions'][key] + "\n"
   });
   return msg
+}
+
+function Ping(){
+  return "Pong!"
 }
 
 function EmbedCmd(msg) {
